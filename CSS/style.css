@@ -1,14 +1,56 @@
+@font-face {
+    font-family: 'ChromakopiaFont';
+    /* El ../ le dice al navegador: "salte de la carpeta actual" */
+    src: url('../fonts/chromakopia-font.otf') format('opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
 body{
-    background-color: rgb(134, 136, 132);
+    background-color: whitesmoke;
 }
 h1{
     color: greenyellow;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'ChromakopiaFont';
     text-align: center;
 }
 
 p{
-    color: greenyellow;
+    color: green;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+#encabezado{
+    background-color:#38761d;
+    height: auto;
+    min-width: 200px;
+    width: 50%;
+    margin: auto;
+    padding: 16px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px greenyellow;
+}
+    /*
+#encabezado h1{
+    color: black;
+}
+    */
+
+.encabezado1{
+    color: whitesmoke;
+    font-family: 'ChromakopiaFont';
+    text-align: center;
+}
+
+.encabezado2{
+    color: 	whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.encabezado3{
+    color: 	whitesmoke;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
 }
