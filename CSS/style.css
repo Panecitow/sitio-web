@@ -7,29 +7,29 @@
 }
 
 body{
-    background-color: whitesmoke;
-}
-h1{
-    color: greenyellow;
-    font-family: 'ChromakopiaFont';
-    text-align: center;
+    background-color: rgb(1, 130, 63);
 }
 
+
 p{
-    color: green;
+    color: #999999;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
 }
 
 #encabezado{
-    background-color:#38761d;
-    height: auto;
+    background-color:black;
+    height: 90px;
     min-width: 200px;
-    width: 50%;
-    margin: auto;
-    padding: 16px;
+    width: 99%;
+    margin: 0 auto;
+    padding: 10px;
     border-radius: 10px;
-    box-shadow: 5px 5px 15px greenyellow;
+    /*box-shadow: 5px 5px 15px greenyellow;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
     /*
 #encabezado h1{
@@ -37,20 +37,89 @@ p{
 }
     */
 
+
 .encabezado1{
-    color: whitesmoke;
-    font-family: 'ChromakopiaFont';
+    color: 	whitesmoke;
+    font-family: ARIAL BLACK, Arial, Helvetica, sans-serif;
     text-align: center;
+    font-size: 70px;
 }
 
 .encabezado2{
-    color: 	whitesmoke;
-    font-family: Arial, Helvetica, sans-serif;
+    color: whitesmoke;
+    font-family: 'ChromakopiaFont';
     text-align: center;
+    font-size: 30px;
 }
 
 .encabezado3{
     color: 	whitesmoke;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
+}
+
+
+.logo{
+    width: 240px;
+    height: 90px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu{
+    background-color: rgb(1, 130, 63);
+    width: 800px;
+    height: 90px;
+    border-radius: 10px;
+
+    margin-left: 20px;
+    margin-right: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.redes{
+    background-color: rgb(1, 130, 63);
+    width: 290px;
+    height: 90px;
+    border-radius: 10px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.menu ul{
+    list-style: none;
+    background-color: rgb(1, 130, 63);
+    display: flex;
+    gap: 20px;
+}
+
+.menu ul li{
+    float: left;
+}
+
+.menu ul li a{
+    display: block;
+    color: 	#000000;
+    font-family: 'ChromakopiaFont';
+    font-size: 17.5px;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.menu ul li a:hover{
+    color: white;
+    background-color: #5555553b;
+}
+
+.redes img{
+    width: 50px;
+    height: 50px;
+    margin: 10px;
 }
