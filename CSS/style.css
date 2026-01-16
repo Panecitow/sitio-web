@@ -1,125 +1,225 @@
+/* --- FUENTES Y GENERAL --- */
 @font-face {
     font-family: 'ChromakopiaFont';
-    /* El ../ le dice al navegador: "salte de la carpeta actual" */
+    /* Ajusta la ruta si es necesario, ej: ../fonts/ */
     src: url('../fonts/chromakopia-font.otf') format('opentype'); 
     font-weight: normal;
     font-style: normal;
 }
 
-body{
-    background-color: rgb(1, 130, 63);
-}
-
-
-p{
-    color: #999999;
+body {
+    background-color: rgb(1, 130, 63); /* Verde base */
+    margin: 0;
+    padding: 0;
     font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
 }
 
-#encabezado{
-    background-color:black;
-    height: 90px;
-    min-width: 200px;
-    width: 99%;
-    margin: 0 auto;
+/* --- ENCABEZADO --- */
+#encabezado {
+    background-color: black;
+    width: 95%;
+    height: auto;
+    min-height: 90px;
+    margin: 10px auto;
     padding: 10px;
-    border-radius: 10px;
-    /*box-shadow: 5px 5px 15px greenyellow;*/
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-}
-    /*
-#encabezado h1{
-    color: black;
-}
-    */
-
-
-.encabezado1{
-    color: 	whitesmoke;
-    font-family: ARIAL BLACK, Arial, Helvetica, sans-serif;
-    text-align: center;
-    font-size: 70px;
-}
-
-.encabezado2{
-    color: whitesmoke;
-    font-family: 'ChromakopiaFont';
-    text-align: center;
-    font-size: 30px;
-}
-
-.encabezado3{
-    color: 	whitesmoke;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-}
-
-
-.logo{
-    width: 240px;
-    height: 90px;
-    margin-right: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.menu{
-    background-color: rgb(1, 130, 63);
-    width: 800px;
-    height: 90px;
-    border-radius: 10px;
-
-    margin-left: 20px;
-    margin-right: 20px;
-    justify-content: center;
-    align-items: center;
-}
-
-.redes{
-    background-color: rgb(1, 130, 63);
-    width: 290px;
-    height: 90px;
-    border-radius: 10px;
+    border: 2px solid white; /* Borde blanco estilo aesthetic */
     
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap; /* Para que se adapte en pantallas chicas */
 }
 
+.logo img {
+    height: 100px;
+    width: auto;
+}
 
-.menu ul{
+.menu ul {
     list-style: none;
-    background-color: rgb(1, 130, 63);
+    padding: 0;
     display: flex;
-    gap: 20px;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
-.menu ul li{
-    float: left;
-}
-
-.menu ul li a{
-    display: block;
-    color: 	#000000;
-    font-family: 'ChromakopiaFont';
-    font-size: 17.5px;
-    text-align: center;
-    padding: 14px 16px;
+.menu ul li a {
     text-decoration: none;
-}
-
-.menu ul li a:hover{
     color: white;
-    background-color: #5555553b;
+    font-family: 'ChromakopiaFont', sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    transition: 0.3s;
 }
 
-.redes img{
-    width: 50px;
-    height: 50px;
-    margin: 10px;
+.menu ul li a:hover {
+    color: rgb(1, 130, 63); /* Verde hover */
+    text-shadow: 0 0 5px rgb(1, 130, 63);
+}
+
+.redes {
+    display: flex;
+    gap: 10px;
+}
+
+.redes img {
+    width: 30px;
+    height: 30px;
+    filter: invert(1); /* Hace los iconos blancos si eran negros */
+    transition: transform 0.2s;
+}
+.redes img:hover { transform: scale(1.2); }
+
+/* --- TÍTULOS --- */
+.encabezado1 {
+    color: white;
+    text-align: center;
+    font-family: 'ChromakopiaFont', sans-serif;
+    font-size: 60px;
+    text-transform: uppercase;
+    margin-top: 40px;
+    margin-bottom: 0px;
+    text-shadow: 5px 5px 0px black; /* Sombra dura */
+}
+
+.encabezado2 {
+    color: black;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-weight: 900;
+    font-size: 24px;
+    letter-spacing: 5px; /* Letras separadas estilo cine */
+    margin-top: 5px;
+    margin-bottom: 30px;
+}
+
+.subtitulos-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.encabezado3 {
+    display: inline-block;
+    color: whitesmoke;
+    font-family: 'ChromakopiaFont', sans-serif;
+    margin: 0 15px;
+    font-size: 22px;
+}
+
+.intro-texto {
+    color: whitesmoke;
+    text-align: center;
+    font-size: 16px;
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+}
+
+/* --- TARJETAS (CARDS) --- */
+#cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 20px;
+}
+
+/* ESTILO UNIFICADO PARA TODAS LAS TARJETAS */
+.card-bienvenida {
+    background-color: whitesmoke;
+    width: 300px;
+    height: 500px; /* Altura fija para uniformidad */
+    padding: 15px;
+    
+    /* El estilo Chromakopia: Borde negro y sombra dura */
+    border: 3px solid black;
+    box-shadow: 10px 10px 0px black; 
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.card-bienvenida:hover {
+    transform: translate(-5px, -5px);
+    box-shadow: 15px 15px 0px black;
+}
+
+.card-bienvenida img {
+    width: 100%;
+    height: 200px; /* Importante: fuerza a todas las fotos a medir lo mismo */
+    object-fit: cover; /* Recorta la imagen para que no se deforme */
+    border: 2px solid black;
+    margin-bottom: 15px;
+}
+
+.card-bienvenida h1 {
+    font-family: 'ChromakopiaFont', sans-serif;
+    color: rgb(1, 130, 63);
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.card-bienvenida p {
+    font-size: 14px;
+    color: #333;
+}
+
+/* --- BOTÓN ALERTA --- */
+.btn-alerta {
+    padding: 15px 30px;
+    background-color: black;
+    color: white;
+    font-family: 'ChromakopiaFont', sans-serif;
+    font-size: 20px;
+    border: 2px solid white;
+    cursor: pointer;
+    box-shadow: 5px 5px 0px white;
+}
+.btn-alerta:active {
+    transform: translate(2px, 2px);
+    box-shadow: 3px 3px 0px white;
+}
+
+
+/* --- FOOTER INFO --- */
+#containerInfoFisio {
+    width: 90%;
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 40px;
+    border: 2px solid white;
+    
+    /* Fondo oscuro semitransparente sobre una imagen */
+    background-image: 
+        linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),
+        url('/images/back-Image2.png'); 
+    background-size: cover;
+    background-position: center;
+    
+    color: white;
+    text-align: center;
+}
+
+#containerInfoFisio h1 {
+    font-family: 'ChromakopiaFont', sans-serif;
+    font-size: 40px;
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 0px rgb(1, 130, 63);
+}
+
+#containerInfoFisio p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    margin-top: 40px;
 }

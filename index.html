@@ -3,43 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bienvenido al sitio</title>
+    <title>Bienvenido al sitio - Chromakopia Ed.</title>
     <link rel="stylesheet" href="/CSS/style.css">
 </head>
 <body>
-    <div id="encabezado">
-    <div class="logo"><img src="/images/logoPNG-MINI.png" alt="Logo"></div>
-    <div class="menu">
-        <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Lesiones</a></li>
-            <li><a href="#">Autocuidado</a></li>
-            <li><a href="#">Deporte</a></li>
-            <li><a href="">Mujer</a></li>
-            <li><a href="">Clinicas</a></li>
-        </ul>
-    </div>
-    <div class="redes">
-        <img src="/images/facebool.png" alt="facebool">
-        <img src="/images/instagram.png" alt="instagram">
-        <img src="/images/x-twitter.png" alt="x-twitter">
-        <img src="/images/tik-tok.png" alt="tiktok">
-    </div>
 
+    <div id="encabezado">
+        <div class="logo"><img src="/images/logoPNG-MINI.png" alt="Logo"></div>
+        <div class="menu">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#" onclick="suma()">Lesiones</a></li>
+                <li><a href="#" onclick="sumaParam(12,30)">Autocuidado</a></li>
+                <li><a href="#">Deporte</a></li>
+                <li><a href="">Mujer</a></li>
+                <li><a href="">Clinicas</a></li>
+            </ul>
+        </div>
+        <div class="redes">
+            <img src="/images/facebool.png" alt="facebook">
+            <img src="/images/instagram.png" alt="instagram">
+            <img src="/images/x-twitter.png" alt="x-twitter">
+            <img src="/images/tik-tok.png" alt="tiktok">
+        </div>
     </div>
     
     <h1 class="encabezado1">Clinica Ping Ling</h1>
-    
     <h2 class="encabezado2">CHROMAKOPIA EDITION</h2>
     
-    <h2 class="encabezado3">Servicios Terapeuticos</h2>
-    <h2 class="encabezado3">Rehabilitacion Funcional</h2>
+    <div class="subtitulos-container">
+        <h2 class="encabezado3">Servicios Terapeuticos</h2>
+        <h2 class="encabezado3">Rehabilitacion Funcional</h2>
+    </div>
 
-    <p>Holam bienvenido al sitio de Fisioterapia, en esta accion encontraras información de nuestros servicios,
-        horarios y mucho más.
+    <p class="intro-texto">
+        Hola, bienvenido al sitio de Fisioterapia. En esta sección encontrarás información de nuestros servicios, horarios y mucho más.
     </p>
-    <button onclick="mostrarAlerta()">Alerta</button>
 
+    <div id="cards">
+
+        <div id="containerBienvenida01" class="card-bienvenida">
+            <img src="/images/miniPekka.jpg" alt="Especialistas">
+            <h1>Los mejores especialistas</h1>
+            <p>Profesionales en su campo, actualmente contando con certificaciones y experiencia.</p>
+        </div>
+
+        <div id="containerBienvenida02" class="card-bienvenida">
+            <img src="/images/sherk.webp" alt="Pacientes">
+            <h1>Pacientes felices</h1>
+            <p>Nuestros pacientes quedan completamente satisfechos.</p>
+        </div>
+
+        <div id="containerBienvenida03" class="card-bienvenida">
+            <img src="/images/proveedor.jpg" alt="Proveedores">
+            <h1>Provedores de alto renombre</h1>
+            <p>Contamos con provedores de buen corazon que nos brindan su apoyo economico y afecto.</p>
+        </div>
+
+    </div>
+
+    <div style="text-align: center; margin: 20px;">
+        <button onclick="mostrarAlerta()" class="btn-alerta">Alerta</button>
+    </div>
+    
     <script src="/JS/function.js"></script>
+
+    <div id="containerInfoFisio">
+        <h1>¿Que es la fisioterapia?</h1>
+        <p>La fisioterapia es una disciplina de la salud que se encarga de prevenir, tratar y rehabilitar diversas condiciones físicas y funcionales del cuerpo humano. A través de técnicas manuales, ejercicios terapéuticos, modalidades físicas y otros enfoques, los fisioterapeutas trabajan para mejorar la movilidad, aliviar el dolor, restaurar la función y promover el bienestar general de los pacientes.</p>
+        
+        Valor 1:<input type="number" name="val1" id="valor1"><br><br>
+        Valor 2:<input type="number" name="val2" id="valor2"><br><br>
+        <button class="btn-alerta" onclick="sumarInput()">Calcular</button><br><br><br>
+        Mensaje: <input type="text" name="mensaje" id="mensaje">
+    </div>
+
 </body>
+<footer>
+    <p>&copy; 2026 Clinica Ping Ling. Todos los derechos reservados.</p>
 </html>
